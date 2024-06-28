@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download YouTube Video</title>
+</head>
+<body>
+    <h1>Download YouTube Video</h1>
+    <form id="download-form">
+        <label for="video-url">YouTube Video URL:</label>
+        <input type="text" id="video-url" name="video-url" required>
+        <button type="submit">Download</button>
+    </form>
+
+    <div id="message"></div>
+    <div id="download-link" style="display: none;">
+        <a id="video-link" href="#" download>Download Video</a>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
