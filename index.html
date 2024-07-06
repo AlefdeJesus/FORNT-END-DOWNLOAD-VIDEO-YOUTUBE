@@ -1,23 +1,128 @@
+<!-- /*
+* Template Name: Property
+* Template Author: Untree.co
+* Template URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download YouTube Video</title>
-</head>
-<body>
-    <h1>Download YouTube Video</h1>
-    <form id="download-form">
-        <label for="video-url">YouTube Video URL:</label>
-        <input type="text" id="video-url" name="video-url" required>
-        <button type="submit">Download</button>
-    </form>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Untree.co" />
+    <link rel="shortcut icon" href="images/logo.png" />
 
-    <div id="message"></div>
-    <div id="download-link" style="display: none;">
-        <a id="video-link" href="#" download>Download Video</a>
+    <meta name="description" content="" />
+    <meta name="keywords" content="bootstrap, bootstrap5" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css" />
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
+
+    <link rel="stylesheet" href="css/tiny-slider.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="style/index.css">
+
+    <title>
+      DownTube
+    </title>
+  </head>
+  <body >
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close">
+          <span class="icofont-close js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
     </div>
 
-    <script src="app.js"></script>
-</body>
+    <nav class="site-nav ">
+      <div class="container">
+        <div class="menu-bg-wrap color-nav">
+          <div class="site-navigation">
+            <a href="index.html" class="logo m-0 float-start "><img src="images/logo--.png" alt="Logo do Site" id="logo"></a>
+
+            <ul
+              class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end"
+            >
+              <li class="active"><a href="index.html">Politica de uso</a></li>
+              <li class="has-children">
+              </li>
+              <li class="active"><a href="services.html">Politica de privacidade</a></li>
+            </ul>
+
+            <a
+              href="#"
+              class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none"
+              data-toggle="collapse"
+              data-target="#main-navbar"
+            >
+              <span></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="hero">
+
+      <div class="container" id="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-9 text-center">
+            <h3 id="textoBaixarVideo">Baixe video do YouTube e Short de forma rápida e fácil!</h3>
+            <h1 class=" align-items-center corLetraRed" data-aos="fade-up">
+              Insira a URL do video do YouTube
+            </h1>
+            <form
+              id="download-form"
+              action="#"
+              class="narrow-w form-search d-flex align-items-stretch mb-3 mt-5"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <input
+                type="url"
+                class="form-control px-4"
+                placeholder="https://youtube.com.br"
+                id="video-url" 
+                name="video-url"
+              />
+              <button type="submit" class="btn btn-primary color-nav">Baixar</button>
+            </form>
+            <div id="message"></div>
+            <div id="infoBaixando" style="display: none;">Aguarde estamos baixando seu video.....</div>
+            <div id="download-link" style="display: none;">
+               <div id="card-video">
+                  
+                    <video src="" id="video-player" controls></video>
+                    <button class="glow-on-hover"  ><a id="video-link"  href="#"  download>Baixar Video</a></button>
+               </div>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+
+    
+    
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/tiny-slider.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="scripts/index.js"></script>
+
+    
+  </body>
 </html>

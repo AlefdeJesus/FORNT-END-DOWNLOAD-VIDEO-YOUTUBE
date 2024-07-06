@@ -1,16 +1,24 @@
+
 document.getElementById('download-form').addEventListener('submit', async function(event) {
+    const botaoBaixar = document.querySelector('.btn');
+    const infoBaixando = document.querySelector('#infoBaixando');
+    const container = document.querySelector('#container');
+    
+    botaoBaixar.style.display = 'none'
+    infoBaixando.style.display = 'block'
     event.preventDefault();
 
     const url = document.getElementById('video-url').value;
     const messageDiv = document.getElementById('message');
     const downloadLinkDiv = document.getElementById('download-link');
     const videoLink = document.getElementById('video-link');
+    const videoPlayer = document.querySelector('#video-player');
 
     messageDiv.textContent = '';
     downloadLinkDiv.style.display = 'none';
 
     try {
-        const response = await fetch('http://localhost:3000/download', {
+        const response = await fetch('http://192.168.1.3:3000/download', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -22,11 +30,19 @@ document.getElementById('download-form').addEventListener('submit', async functi
         console.log('Data recebido:', data);  // Adicione este log para depuração
 
         if (response.ok) {
-            messageDiv.textContent = data.message;
+           // messageDiv.textContent = data.message;
             if (data.filePath) {
-                videoLink.href = `http://localhost:3000/${data.filePath}`;
-                videoLink.textContent = `${data.filePath.split('/').pop()}`;
+                const videoUrl = `http://192.168.1.3:3000/${data.filePath}`
+           
+                videoLink.href = videoUrl;
+                videoLink.textContent = 'Baixar video';
+               console.log(videoUrl)
+                videoPlayer.src = videoUrl
+            
                 downloadLinkDiv.style.display = 'block';
+                infoBaixando.style.display = 'none'
+                  botaoBaixar.style.display = 'block'
+                  container.style.marginTop = '10%'
             } else {
                 messageDiv.textContent = 'Erro: Caminho do arquivo não encontrado.';
             }

@@ -1,0 +1,102 @@
+body{
+    background-color: rgb(39, 58, 94) !important;
+   
+}
+#textoBaixarVideo{
+    text-align: center;
+    color: #00ffd5;
+}
+#logo{
+    width: 40%;
+    margin: -23px;
+    
+}
+#infoBaixando{
+    color: rgb(184, 179, 245);
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.corLetraRed{
+    color:white;
+    font-weight: bold;
+}
+.color-nav{
+    background-color: brown !important;
+}
+#card-video{
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+
+}
+#video-player {
+    width: 400px;
+    height: auto !important;
+    max-height: 500px;
+    align-items: center;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  #video-link{
+    color: wheat;
+    font-weight: bold;
+  }
+
+
+  .glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 1; /* Alterado para manter o brilho */
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000;
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
