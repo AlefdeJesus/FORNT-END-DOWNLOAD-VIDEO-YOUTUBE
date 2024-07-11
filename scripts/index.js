@@ -18,7 +18,7 @@ document.getElementById('download-form').addEventListener('submit', async functi
     downloadLinkDiv.style.display = 'none';
 
     try {
-        const response = await fetch('http://192.168.1.3:3000/download', {
+        const response = await fetch('https://d9d9-45-225-120-218.ngrok-free.app/download', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -32,7 +32,7 @@ document.getElementById('download-form').addEventListener('submit', async functi
         if (response.ok) {
            // messageDiv.textContent = data.message;
             if (data.filePath) {
-                const videoUrl = `http://192.168.1.3:3000/${data.filePath}`
+                const videoUrl = `https://d9d9-45-225-120-218.ngrok-free.app/${data.filePath}`
            
                 videoLink.href = videoUrl;
                 videoLink.textContent = 'Baixar video';
