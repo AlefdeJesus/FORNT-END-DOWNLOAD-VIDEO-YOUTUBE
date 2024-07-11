@@ -7,8 +7,9 @@ body{
     color: #00ffd5;
 }
 #logo{
-    width: 40%;
+    width: 80px;
     margin: -23px;
+    border-radius: 20px;
     
 }
 #infoBaixando{
