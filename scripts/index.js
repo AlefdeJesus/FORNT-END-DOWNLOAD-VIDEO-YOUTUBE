@@ -18,7 +18,7 @@ document.getElementById('download-form').addEventListener('submit', async functi
     downloadLinkDiv.style.display = 'none';
 
     try {
-        const response = await fetch('https://b19a-45-225-120-218.ngrok-free.app//download', {
+        const response = await fetch('https://b19a-45-225-120-218.ngrok-free.app/download', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
