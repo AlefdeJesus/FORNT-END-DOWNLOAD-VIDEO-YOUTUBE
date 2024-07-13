@@ -42,7 +42,7 @@ document.getElementById('download-form').addEventListener('submit', async functi
                 downloadLinkDiv.style.display = 'block';
                 infoBaixando.style.display = 'none'
                   botaoBaixar.style.display = 'block'
-                  container.style.marginTop = '10%'
+                  container.style.marginTop = '8rem'
             } else {
                 messageDiv.textContent = 'Erro: Caminho do arquivo não encontrado.';
             }
