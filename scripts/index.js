@@ -10,7 +10,7 @@ document.getElementById('download-form').addEventListener('submit', async functi
     infoBaixando.style.display = 'block'
     event.preventDefault();
 
-    const url = document.getElementById('video-url').value;
+    let url = document.getElementById('video-url').value;
     const messageDiv = document.getElementById('message');
     const downloadLinkDiv = document.getElementById('download-link');
     const videoLink = document.getElementById('video-link');
@@ -33,6 +33,7 @@ document.getElementById('download-form').addEventListener('submit', async functi
         console.log('Data recebido:', data);  // Adicione este log para depuração
 
         if (response.ok) {
+            let limpaURL = document.getElementById('video-url').value = '';
            // messageDiv.textContent = data.message;
             if (data.filePath) {
                 const videoUrl = `https://b19a-45-225-120-218.ngrok-free.app/${data.filePath}`
@@ -47,6 +48,7 @@ document.getElementById('download-form').addEventListener('submit', async functi
                   botaoBaixar.style.display = 'block';
                  
                   container.style.marginTop = '8rem';
+                
             } else {
                 messageDiv.textContent = 'Erro: Caminho do arquivo não encontrado.';
             }
