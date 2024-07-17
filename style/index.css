@@ -6,6 +6,9 @@ body{
     text-align: center;
     color: #00ffd5;
 }
+.icon-instagram{
+    width: 1.5rem;
+}
 #logo{
     width: 80px;
     margin: -23px;
@@ -24,9 +27,7 @@ body{
     display: flex;
     flex-direction: row;
 }
-#titulo-card-passos{
-    
-}
+
 .image-passos{
     width: 12rem;
     border-radius: 10px;
@@ -124,9 +125,20 @@ body{
 /*CONFIGURAÇÃO DE CELULAR A TABLET*/
 @media only screen and (max-width: 768px) {
     body{
-        background-color: rgb(39, 58, 94) !important;
-       
+        background-color: rgb(39, 58, 94)!important;   
     }
+
+    #div-main {
+        padding-top: 8rem !important;
+        padding-bottom: 3rem !important;
+    }
+    .icon-instagram{
+        width: 1.5rem;
+    }
+    footer {
+      display: none;
+    
+ }
     #textoBaixarVideo{
         text-align: center;
         color: #00ffd5;
