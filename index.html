@@ -43,6 +43,29 @@
     </title>
   </head>
   <body >
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyDc8c_N103ngAiuCnvfA3iBjryJl5_e3UE",
+        authDomain: "baixartube-7c417.firebaseapp.com",
+        projectId: "baixartube-7c417",
+        storageBucket: "baixartube-7c417.appspot.com",
+        messagingSenderId: "470615174357",
+        appId: "1:470615174357:web:8bc08fb4d95ab5e563865c",
+        measurementId: "G-PCSXW3NYWT"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
     <div class="site-mobile-menu site-navbar-target">
       <div class="site-mobile-menu-header">
         <div class="site-mobile-menu-close">
