@@ -74,6 +74,6 @@ document.querySelector('.btn').addEventListener('click', function() {
     setTimeout(() => {
         const infoBaixando = document.querySelector('#infoBaixando');
         infoBaixando.style.color = 'rgb(26, 153, 238)';
-        infoBaixando.textContent = 'Mais um momento, seu video está quase pronto......';
-    }, 25000);
+        infoBaixando.textContent = 'Mais um momento, seu video está sendo baixado......';
+    }, 40000);
 });
