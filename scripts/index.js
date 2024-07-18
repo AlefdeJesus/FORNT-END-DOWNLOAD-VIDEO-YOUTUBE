@@ -1,3 +1,5 @@
+import LINK_API from "./linkAPI.js";
+
 
 document.getElementById('download-form').addEventListener('submit', async function(event) {
     const botaoBaixar = document.querySelector('.btn');
@@ -18,10 +20,10 @@ document.getElementById('download-form').addEventListener('submit', async functi
 
     messageDiv.textContent = '';
     downloadLinkDiv.style.display = 'none';
-  
+  console.log(LINK_API)
 
     try {
-        const response = await fetch('https://b19a-45-225-120-218.ngrok-free.app/download', {
+        const response = await fetch(`${LINK_API}/download`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -36,7 +38,7 @@ document.getElementById('download-form').addEventListener('submit', async functi
             let limpaURL = document.getElementById('video-url').value = '';
            // messageDiv.textContent = data.message;
             if (data.filePath) {
-                const videoUrl = `https://b19a-45-225-120-218.ngrok-free.app/${data.filePath}`
+                const videoUrl = `${LINK_API}/${data.filePath}`
            
                 videoLink.href = videoUrl;
                 videoLink.textContent = 'Baixar video';
