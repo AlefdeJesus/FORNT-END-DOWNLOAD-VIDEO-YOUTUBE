@@ -59,3 +59,21 @@ document.getElementById('download-form').addEventListener('submit', async functi
         messageDiv.textContent = 'Erro ao enviar a requisição: ' + error.message;
     }
 });
+
+////função para colocar texto se demorar o video
+document.querySelector('.btn').addEventListener('click', function() {
+    setTimeout(() => {
+        const infoBaixando = document.querySelector('#infoBaixando');
+        infoBaixando.style.color = 'rgb(26, 153, 238)';
+        infoBaixando.textContent = 'Aguarde um momento, seu video é um pouco grande......';
+    }, 18000);
+});
+
+////função para colocar texto se demorar o video
+document.querySelector('.btn').addEventListener('click', function() {
+    setTimeout(() => {
+        const infoBaixando = document.querySelector('#infoBaixando');
+        infoBaixando.style.color = 'rgb(26, 153, 238)';
+        infoBaixando.textContent = 'Mais um momento, seu video está quase pronto......';
+    }, 25000);
+});

@@ -126,6 +126,7 @@ body{
 @media only screen and (max-width: 768px) {
     body{
         background-color: rgb(39, 58, 94)!important;   
+
     }
 
     #div-main {
