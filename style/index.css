@@ -128,11 +128,14 @@ body{
         background-color: rgb(39, 58, 94)!important;   
 
     }
-
+.tamanho-fonte-alerta{
+    font-size: 0.9rem !important;
+}
     #div-main {
         padding-top: 8rem !important;
         padding-bottom: 3rem !important;
     }
+    
     .icon-instagram{
         width: 1.5rem;
     }
