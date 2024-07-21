@@ -20,17 +20,19 @@ document.getElementById('download-form').addEventListener('submit', async functi
 
     messageDiv.textContent = '';
     downloadLinkDiv.style.display = 'none';
-  console.log(LINK_API)
+    console.log('front end link'+LINK_API)
 
     try {
         const response = await fetch(`${LINK_API}/download`, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
             },
             body: JSON.stringify({ url })
+          
         });
-
+        
         const data = await response.json();
         console.log('Data recebido:', data);  // Adicione este log para depuração
 
