@@ -13,6 +13,6 @@ https://github.com/AlefdeJesus/download-youtube
 Instruções sobre como instalar o projeto:
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/AlefdeJesus/FORNT-END-DOWNLOAD-VIDEO-YOUTUBE.git
 
 Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para mais detalhes. ```
